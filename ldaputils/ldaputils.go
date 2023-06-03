@@ -31,7 +31,7 @@ func setcon() *ldap.Conn {
 	caCertPool := x509.NewCertPool()
 	caCertPool.AppendCertsFromPEM(caCert)
 
-	// Create the TLS Config with the CA pool and enable Client certificate validation
+	// Create the TLS Config with the CA pool and enable server CA validation
 	cfg := &tls.Config{
 		ServerName: "ldap.nginx.svc.cluster.local",
 		RootCAs:    caCertPool,
