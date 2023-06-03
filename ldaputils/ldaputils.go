@@ -23,7 +23,7 @@ func setcon() *ldap.Conn {
 		os.Exit(0)
 	}
 
-	caCert, err := ioutil.ReadFile("/home/swapnil/ldap/myca.crt")
+	caCert, err := ioutil.ReadFile("/etc/tls/ca.crt")
 	if err != nil {
 		log.Fatal(err)
 	}
